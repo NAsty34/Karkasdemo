@@ -1,0 +1,25 @@
+﻿<Window x:Class="karkas.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:karkas"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800">
+    <Grid>
+        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="332,26,332,350">Услуги</TextBlock>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="593,107,17,284">Добавить услугу</Button>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="381,110,229,284">Удалить услугу</Button>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="595,13,18,350" Content="Редактировать&#xD;&#xA;запись" />
+        <Button FontFamily="Tahoma" FontSize="20" Margin="42,109,565,282" Content="Записать клиента" Click="Button_Click"/>
+        <DataGrid Margin="42,185,36,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Column1"/>
+                <DataGridTextColumn Header="Column2"/>
+                <DataGridTextColumn Header="Column3"/>
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+    </Grid>
+</Window>
