@@ -29,3 +29,4 @@ C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFram
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.xml
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\karkas.csproj.CopyComplete
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\karkas_Content.g.cs

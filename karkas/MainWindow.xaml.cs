@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using karkas.AppDataFile;
+using System.Collections.ObjectModel;
+using System.Security.Policy;
 
 namespace karkas
 {
@@ -21,12 +24,13 @@ namespace karkas
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-        }
+            
 
-       
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
