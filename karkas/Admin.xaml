@@ -5,21 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Admin" Height="450" Width="800">
+        Title="Admin" Height="814" Width="800">
     <Grid>
-        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="332,26,332,350">Услуги</TextBlock>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="593,107,17,284">Добавить услугу</Button>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="381,110,229,284">Удалить услугу</Button>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="595,13,18,350" Content="Редактировать&#xD;&#xA;запись" />
-        <Button FontFamily="Tahoma" FontSize="20" Margin="42,109,565,282" Content="Записать клиента" Click="Button_Click"/>
-        <DataGrid Margin="42,185,36,10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Column1"/>
-                <DataGridTextColumn Header="Column2"/>
-                <DataGridTextColumn Header="Column3"/>
-            </DataGrid.Columns>
-
-
-        </DataGrid>
+        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="332,26,332,718">Услуги</TextBlock>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="45,17,565,709" Click="Button_Click_1">Добавить услугу</Button>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="592,109,18,623" Click="Button_Click_2">Удалить услугу</Button>
+        <Button FontFamily="Tahoma" FontSize="20" Margin="595,13,18,718" Content="Редактировать&#xD;&#xA;запись" />
+        <Button FontFamily="Tahoma" FontSize="20" Margin="42,109,565,623" Content="Записать клиента" Click="Button_Click"/>
+        
     </Grid>
 </Window>

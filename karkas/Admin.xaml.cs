@@ -30,6 +30,17 @@ namespace karkas
             Close();
         }
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new Add().Show();
+            Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string message = "Запись удалена";
+            string caption = "Remove";
+            MessageBoxResult result = MessageBox.Show(message, caption);
+        }
     }
 }

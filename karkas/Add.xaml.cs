@@ -12,25 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace karkas
 {
     /// <summary>
-    /// Логика взаимодействия для Zapis.xaml
+    /// Логика взаимодействия для Add.xaml
     /// </summary>
-    public partial class Zapis : Window
+    public partial class Add : Window
     {
-        public Zapis()
+        public Add()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string message = "Запись добавлена";
+            string message = "Услуга добавлена";
             string caption = "Ready";
             MessageBoxResult result = MessageBox.Show(message, caption);
-            
         }
     }
 }

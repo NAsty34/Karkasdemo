@@ -1,0 +1,23 @@
+﻿<Window x:Class="karkas.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:karkas"
+        mc:Ignorable="d"
+        Title="Add" Height="589" Width="800">
+    <Grid>
+        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="214,32,214,482">Добавление услуги</TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="57,112,598,420">Название</TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="20,181,585,340" RenderTransformOrigin="0.484,0.616">Длительность</TextBlock>
+        <TextBox Margin="232,192,27,340"/>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="57,264,658,269">Цена</TextBlock>
+        <TextBox Margin="232,264,27,269"/>
+        <TextBox Margin="232,112,27,420"/>
+        <Button Margin="262,492,262,25" FontSize="30" FontFamily="Tahoma" Click="Button_Click">Добавить</Button>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="20,334,570,188"><Run Language="ru-ru" Text="Изображение"/></TextBlock>
+        <TextBox Margin="235,334,27,194"/>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="36,415,638,122"><Run Language="ru-ru" Text="Скидка"/></TextBlock>
+        <TextBox Margin="232,415,27,114"/>
+    </Grid>
+</Window>

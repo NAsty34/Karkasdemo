@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Zapis" Height="473" Width="800">
+        Title="Zapis" Height="654" Width="800">
     <Grid>
-        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="242,28,242,348">Запись клиента</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,101,664,291">Имя</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,158,624,234"><Run Text="Фамилия"/></TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,227,624,165"><Run Text="Услуга"/></TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,295,624,97"><Run Text="Время"/></TextBlock>
-        <TextBox Margin="214,163,33,251"></TextBox>
-        <ComboBox Margin="214,227,33,177"></ComboBox>
-        <ComboBox Margin="214,301,33,103">
+        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="242,28,242,542">Запись клиента</TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,121,664,465">Имя</TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,196,624,398"><Run Text="Фамилия"/></TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,292,624,292"><Run Text="Услуга"/></TextBlock>
+        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,385,624,198"><Run Text="Время"/></TextBlock>
+        <TextBox Margin="214,201,33,398"></TextBox>
+        <ComboBox Margin="214,292,33,292"></ComboBox>
+        <ComboBox Margin="214,391,33,198">
             <ComboBoxItem>10:00</ComboBoxItem>
             <ComboBoxItem>11:00</ComboBoxItem>
             <ComboBoxItem>13:00</ComboBoxItem>
@@ -22,8 +22,10 @@
             <ComboBoxItem>17:00</ComboBoxItem>
             <ComboBoxItem>18:30</ComboBoxItem>
         </ComboBox>
-        <Button Margin="262,378,262,10" FontSize="30" FontFamily="Tahoma">Записать</Button>
-        <TextBox Margin="214,101,33,313"/>
-        
+        <Button Margin="242,517,282,56" FontSize="30" FontFamily="Tahoma" Click="Button_Click">Записать</Button>
+        <TextBox Margin="214,121,33,479"/>
+
+
+
     </Grid>
 </Window>

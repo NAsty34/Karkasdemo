@@ -18,3 +18,5 @@ C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Admin.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Admin.baml
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Zapis.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Zapis.baml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Add.g.cs
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Add.baml
