@@ -14,7 +14,7 @@
                 <RowDefinition Height="66.04"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="143,22,214,20"><Run Language="ru-ru" Text="Редактирвоание"/><Run Text=" услуги"/></TextBlock>
-            <Button Grid.Row="2" FontSize="30" FontFamily="Tahoma" Click="Button_Click" Margin="242,10,242,10">Сохранить изменение</Button>
+            <Button Grid.Row="2" FontSize="30" FontFamily="Tahoma" Click="Button_Click" Margin="228,10,228,10">Сохранить изменение</Button>
             <Button Grid.Row="0" Margin="591,22,20,12" FontSize="30" FontFamily="Tahoma" Click="Button_Click_1"  Content="Назад"/>
 
             <StackPanel Grid.Row="1">
