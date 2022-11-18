@@ -24,3 +24,8 @@ C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Edit.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Edit.baml
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\AlminYsl.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\AlminYsl.baml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.dll
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.xml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\karkas.csproj.CopyComplete

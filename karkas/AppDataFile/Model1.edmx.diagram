@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="632ca96ee09b47afbd3afa8053ea1922" Name="Diagram1">
+        <EntityTypeShape EntityType="Mihailova_demoModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Mihailova_demoModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.AttachedProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="Mihailova_demoModel.TagOfClient" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
