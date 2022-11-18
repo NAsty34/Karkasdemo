@@ -5,19 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Add" Height="589" Width="800">
+        Title="Add" Height="587" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="214,32,214,482">Добавление услуги</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="57,112,598,420">Название</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="20,181,585,340" RenderTransformOrigin="0.484,0.616">Длительность</TextBlock>
-        <TextBox Margin="232,192,27,340"/>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="57,264,658,269">Цена</TextBlock>
-        <TextBox Margin="232,264,27,269"/>
-        <TextBox Margin="232,112,27,420"/>
-        <Button Margin="262,492,262,25" FontSize="30" FontFamily="Tahoma" Click="Button_Click">Добавить</Button>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="20,334,570,188"><Run Language="ru-ru" Text="Изображение"/></TextBlock>
-        <TextBox Margin="235,334,27,194"/>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="36,415,638,122"><Run Language="ru-ru" Text="Скидка"/></TextBlock>
-        <TextBox Margin="232,415,27,114"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition/>
+            <RowDefinition Height="66.04"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="214,22,214,20">Добавление услуги</TextBlock>
+        <Button Grid.Row="2" FontSize="30" FontFamily="Tahoma" Click="Button_Click" Margin="242,10,242,10">Добавить</Button>
+        <Button Grid.Row="0" Margin="591,22,20,12" FontSize="30" FontFamily="Tahoma" Click="Button_Click_1"  Content="Назад"/>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock FontSize="30" FontFamily="Tahoma">Название</TextBlock>
+            <TextBox Width="798" Height="40"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность</TextBlock>
+            <TextBox Width="798" Height="40"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma">Цена</TextBlock>
+            <TextBox Width="798" Height="40"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma">Изображение</TextBlock>
+            <TextBox Width="798" Height="40"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
+            <TextBox Width="798" Height="49"/>
+        </StackPanel>
+
     </Grid>
 </Window>

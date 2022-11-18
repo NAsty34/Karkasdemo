@@ -15,23 +15,25 @@ using System.Windows.Shapes;
 namespace karkas
 {
     /// <summary>
-    /// Логика взаимодействия для Admin.xaml
+    /// Логика взаимодействия для Edit.xaml
     /// </summary>
-    public partial class Admin : Window
+    public partial class Edit : Window
     {
-        public Admin()
+        public Edit()
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new AlminYsl().Show();
-            Close();
+            string message = "Услуга изменена";
+            string caption = "Ready";
+            MessageBoxResult result = MessageBox.Show(message, caption);
         }
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
 
-        
+            Close();
+        }
     }
 }

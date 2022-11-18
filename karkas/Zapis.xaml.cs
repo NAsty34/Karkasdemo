@@ -27,10 +27,17 @@ namespace karkas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
             string message = "Запись добавлена";
             string caption = "Ready";
             MessageBoxResult result = MessageBox.Show(message, caption);
             
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new Admin().Show();
+            Close();
         }
     }
 }

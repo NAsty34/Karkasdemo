@@ -20,3 +20,7 @@ C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Zapis.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Zapis.baml
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Add.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Add.baml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Edit.g.cs
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\Edit.baml
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\AlminYsl.g.cs
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\AlminYsl.baml

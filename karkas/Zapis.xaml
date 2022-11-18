@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Zapis" Height="654" Width="800">
+        Title="Zapis" Height="654" Width="800" ResizeMode="CanMinimize">
     <Grid>
         <TextBlock FontFamily="Tahoma" FontSize="40" Margin="242,28,242,542">Запись клиента</TextBlock>
         <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,121,664,465">Имя</TextBlock>
@@ -24,8 +24,6 @@
         </ComboBox>
         <Button Margin="242,517,282,56" FontSize="30" FontFamily="Tahoma" Click="Button_Click">Записать</Button>
         <TextBox Margin="214,121,33,479"/>
-
-
-
+        <Button Margin="595,29,33,543" FontSize="30" FontFamily="Tahoma" Click="Button_Click_1"  Content="Назад"/>
     </Grid>
 </Window>

@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Admin" Height="814" Width="800">
+        Title="Admin" Height="490" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <TextBlock FontFamily="Tahoma" FontSize="40" Margin="332,26,332,718">Услуги</TextBlock>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="45,17,565,709" Click="Button_Click_1">Добавить услугу</Button>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="592,109,18,623" Click="Button_Click_2">Удалить услугу</Button>
-        <Button FontFamily="Tahoma" FontSize="20" Margin="595,13,18,718" Content="Редактировать&#xD;&#xA;запись" />
-        <Button FontFamily="Tahoma" FontSize="20" Margin="42,109,565,623" Content="Записать клиента" Click="Button_Click"/>
-        
+        <TextBlock Margin="256,23,256,328" FontFamily="Tahoma" FontSize="40">АВТОРИЗАЦИЯ</TextBlock>
+        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,146,549,217">ЛОГИН</TextBlock>
+        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,244,549,115">ПАРОЛЬ</TextBlock>
+        <TextBox Margin="256,146,203,272"></TextBox>
+        <PasswordBox Margin="256,244,203,172"/>
+        <Button Margin="270,363,270,32" FontSize="30" FontFamily="Tahoma" Click="Button_Click">ВОЙТИ</Button>
+
     </Grid>
+
 </Window>

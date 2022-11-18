@@ -5,13 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="680" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <TextBlock Margin="256,23,256,328" FontFamily="Tahoma" FontSize="40">АВТОРИЗАЦИЯ</TextBlock>
-        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,146,549,217">ЛОГИН</TextBlock>
-        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,244,549,115"><Run Text="Пароль"/></TextBlock>
-        <TextBox Margin="256,146,203,236"></TextBox>
-        <PasswordBox Margin="256,244,203,138"/>
-        <Button Margin="270,336,270,32" FontSize="30" FontFamily="Tahoma" Click="Button_Click">ВОЙТИ</Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="96"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="332,20,332,18">Услуги</TextBlock>
+
+        <Button Grid.Row="0" Margin="583,28,43,18" FontFamily="Tahoma" FontSize="30" Click="Button_Click">Войти</Button>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <Canvas Height="182" Width="800" >
+                <Image Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" Source="Ресницы.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="279" Canvas.Top="26" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Наименование услуги"/>
+                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="279" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
+                <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="279" Canvas.Top="128" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
+            </Canvas>
+            <Canvas Height="194" Width="800" >
+                <Image Height="110" Width="159" Canvas.Left="95" Canvas.Top="44" Source="Ресницы.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="268" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Наименование услуги"/>
+                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="268" Canvas.Top="83" HorizontalAlignment="Left" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
+                <TextBlock HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="268" Canvas.Top="127" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
+            </Canvas>
+            <Canvas Height="177" Width="800" >
+                <Image Height="111" Width="183" Canvas.Left="56" Canvas.Top="28" Source="Ресницы.png"/>
+                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="269" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Наименование услуги"/>
+                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="269" Canvas.Top="68" HorizontalAlignment="Left" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="121" Canvas.Left="269" Canvas.Top="112" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
+            </Canvas>
+        </StackPanel>
+
+
+
     </Grid>
 </Window>

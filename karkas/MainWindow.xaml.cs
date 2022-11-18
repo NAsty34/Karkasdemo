@@ -29,7 +29,8 @@ namespace karkas
         {
             new Admin().Show();
             Close();
-            
         }
+
+        
     }
 }
