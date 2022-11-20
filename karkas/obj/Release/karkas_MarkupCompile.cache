@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Debug\
+C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\obj\Release\
 karkas
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\imnv9\Desktop\демоэкзамен\karkas\karkas\App.xaml
 6227390373
 21335652989
-26641365017
+251995915983
 18-849032759
 Add.xaml;Admin.xaml;AlminYsl.xaml;Edit.xaml;MainWindow.xaml;Zapis.xaml;
 
-False
+True
 

@@ -28,7 +28,8 @@ namespace karkas
         public MainWindow()
         {
             InitializeComponent();
-            
+            Class1.conObj = new Mihailova_demoEntities2();
+            serviceList.ItemsSource = Class1.conObj.Service.ToList();
 
         }
 
@@ -38,6 +39,9 @@ namespace karkas
             Close();
         }
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -4,6 +4,31 @@
              xmlns:local="clr-namespace:karkas"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="Img" TargetType="Image">
+            <Setter Property="Source" Value="beauty_logo.png"/>
+        </Style>
+
+        <Style x:Key="Button1">
+            <Setter Property="Control.FontFamily" Value="Tahoma"/>
+            <Setter Property="Control.Background" Value="#ff4a6d"/>
+            <Setter Property="Control.Foreground" Value="White"/>
+            <Setter Property="Control.FontSize" Value="30"/>
+        </Style>
+
+
+        <Style x:Key="Button2">
+            <Setter Property="Control.FontFamily" Value="Tahoma"/>
+            <Setter Property="Control.Background" Value="White"/>
+            <Setter Property="Control.FontSize" Value="30"/>
+        </Style>
+
+        <Style x:Key="Button3">
+            <Setter Property="Control.FontFamily" Value="Tahoma"/>
+            <Setter Property="Control.Background" Value="#e1e4ff"/>
+            <Setter Property="Control.FontSize" Value="30"/>
+        </Style>
+        
+        
     </Application.Resources>
 </Application>

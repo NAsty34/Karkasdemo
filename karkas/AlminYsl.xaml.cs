@@ -1,4 +1,5 @@
-﻿using System;
+﻿using karkas.AppDataFile;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace karkas
         public AlminYsl()
         {
             InitializeComponent();
+            Class1.conObj = new Mihailova_demoEntities2();
+            serviceList.ItemsSource = Class1.conObj.Service.ToList();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

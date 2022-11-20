@@ -5,16 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="800" ResizeMode="CanMinimize">
+        Title="MainWindow" Height="759" Width="800" ResizeMode="CanMinimize">
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="96"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
+        <Image Style="{DynamicResource ResourceKey=Img}" Margin="11,5,636,5" />
+
+        
         <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="332,20,332,18">Услуги</TextBlock>
 
-        <Button Grid.Row="0" Margin="583,28,43,18" FontFamily="Tahoma" FontSize="30" Click="Button_Click">Войти</Button>
-        <ScrollViewer Grid.Row="1" d:IsHidden="True"/>
-        
+        <Button Grid.Row="0" Margin="583,28,43,18" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Войти</Button>
+        <ScrollViewer Grid.Row="1">
+            <ListBox x:Name="serviceList">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Canvas Height="182" Width="800">
+                            <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Height="100" Width="418" Canvas.Left="279" Canvas.Top="26" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <TextBlock Text="{Binding Path=Cost, StringFormat={}{0:#.00}}"  FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="279" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
+                        </Canvas>
+             
+                    </DataTemplate>
+                    
+                </ListBox.ItemTemplate>
+               
+            </ListBox>
+        </ScrollViewer>
+
     </Grid>
 </Window>

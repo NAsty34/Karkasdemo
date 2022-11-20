@@ -7,40 +7,35 @@
         mc:Ignorable="d"
         Title="AlminYsl" Height="734" Width="873" ResizeMode="CanMinimize" >
     <Grid>
+        <Image Style="{DynamicResource ResourceKey=Img}" Margin="0,5,716,5" />
         <Grid.RowDefinitions>
             <RowDefinition Height="96"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="332,8,332,34">Услуги</TextBlock>
-        <Button Grid.Row="0" Margin="546,20,28,20" FontFamily="Tahoma" FontSize="30" Click="Button_Click">Добавить услугу</Button>
+        
+        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="358,20,357,22">Услуги</TextBlock>
+        
+        <Button Grid.Row="0" Margin="546,20,28,20" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Добавить услугу</Button>
 
         <ScrollViewer Grid.Row="1">
-        <StackPanel Orientation="Vertical" Margin="0,4,0,3" Grid.Row="1">
-            <Canvas Height="198" Width="804" >
-                <Image Height="110" Width="183" Canvas.Left="58" Canvas.Top="38" Source="Ресницы.png"/>
-                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="271" Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Наименование услуги"/>
-                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="271" Canvas.Top="66" HorizontalAlignment="Center" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
-                <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
-                <Button FontFamily="Tahoma" FontSize="20" Content="Редактировать запись" Canvas.Left="271" Canvas.Top="145" HorizontalAlignment="Center" VerticalAlignment="Top" Width="242" Height="44" Click="Button_Click_3" />
-                <Button FontFamily="Tahoma" FontSize="20" Click="Button_Click_2" Content="Удалить услугу" Canvas.Left="545" Canvas.Top="145" Height="44" HorizontalAlignment="Left" VerticalAlignment="Center" Width="180"/>
-            </Canvas>
-            <Canvas Height="198" Width="804" >
-                <Image Height="110" Width="183" Canvas.Left="58" Canvas.Top="38" Source="/Ресницы.png"/>
-                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="271" Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Наименование услуги"/>
-                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="271" Canvas.Top="66" HorizontalAlignment="Center" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
-                <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
-                <Button FontFamily="Tahoma" FontSize="20" Content="Редактировать запись" Canvas.Left="271" Canvas.Top="145" HorizontalAlignment="Center" VerticalAlignment="Top" Width="242" Height="44" Click="Button_Click_3" />
-                <Button FontFamily="Tahoma" FontSize="20" Click="Button_Click_2" Content="Удалить услугу" Canvas.Left="545" Canvas.Top="145" Height="44" HorizontalAlignment="Left" VerticalAlignment="Center" Width="177"/>
-            </Canvas>
-            <Canvas Height="198" Width="804" >
-                <Image Height="110" Width="183" Canvas.Left="58" Canvas.Top="38" Source="/Ресницы.png"/>
-                <TextBlock FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="271" Canvas.Top="20" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Наименование услуги"/>
-                <TextBlock FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="271" Canvas.Top="66" HorizontalAlignment="Center" VerticalAlignment="Top" Text="800 рублей за 30 минут"/>
-                <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
-                <Button FontFamily="Tahoma" FontSize="20" Content="Редактировать запись" Canvas.Left="271" Canvas.Top="145" HorizontalAlignment="Center" VerticalAlignment="Top" Width="242" Height="44" Click="Button_Click_3" />
-                <Button FontFamily="Tahoma" FontSize="20" Click="Button_Click_2" Content="Удалить услугу" Canvas.Left="545" Canvas.Top="145" Height="44" HorizontalAlignment="Left" VerticalAlignment="Center" Width="183"/>
-            </Canvas>
-        </StackPanel>
+            <ListBox x:Name="serviceList">
+                <ListBox.ItemTemplate>
+                     <DataTemplate>
+                        <Canvas Height="182" Width="800">
+                            <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="279" Canvas.Top="26" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <TextBlock Text="{Binding Path=Cost}" FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="279" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
+                            <Button Click="Button_Click_3" Canvas.Left="271" Canvas.Top="150">Редактировать услугу</Button>
+                            <Button Click="Button_Click_2"  Canvas.Left="400" Canvas.Top="150" >Удалить услугу</Button>
+                        </Canvas> 
+                         
+                    </DataTemplate> 
+                    
+                </ListBox.ItemTemplate>
+               
+            </ListBox> 
+            
         </ScrollViewer>
     </Grid>
 </Window>
