@@ -27,6 +27,8 @@ namespace karkas.AppDataFile
         public int DurationInSeconds { get; set; }
         public string Description { get; set; }
         public Nullable<double> Discount { get; set; }
+        public string Discountskid { get; set; }
+        public string oldcost { get; set; }
         public string MainImagePath { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

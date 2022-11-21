@@ -24,10 +24,19 @@ namespace karkas
         {
             InitializeComponent();
             Class1.conObj = new Mihailova_demoEntities2();
-            serviceList.ItemsSource = Class1.conObj.Service.ToList();
+            var basis = Class1.conObj.Service.ToList();
+            foreach (var item in basis)
+            {
+                if (item.Discount > 0)
+                {
+                    item.Discountskid = item.Discount + "% скидка";
+                    item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
+                    item.Cost = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                }
+            }
+            serviceList.ItemsSource = basis;
         }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+            private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             new Edit().Show();
             
@@ -43,6 +52,11 @@ namespace karkas
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new Add().Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new Zapis().Show();
         }
     }
 }

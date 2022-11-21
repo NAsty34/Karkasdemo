@@ -9,22 +9,30 @@
     <Grid>
         <Image Style="{DynamicResource ResourceKey=Img}" Margin="0,10,642,539" />
         <TextBlock FontFamily="Tahoma" FontSize="40" Margin="242,28,242,542">Запись клиента</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,121,664,465">Имя</TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,196,624,398"><Run Text="Фамилия"/></TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,292,624,292"><Run Text="Услуга"/></TextBlock>
-        <TextBlock FontSize="30" FontFamily="Tahoma" Margin="51,385,624,198"><Run Text="Время"/></TextBlock>
-        <TextBox Margin="214,201,33,398"></TextBox>
-        <ComboBox Margin="214,292,33,292"></ComboBox>
-        <ComboBox Margin="214,391,33,198">
-            <ComboBoxItem>10:00</ComboBoxItem>
-            <ComboBoxItem>11:00</ComboBoxItem>
-            <ComboBoxItem>13:00</ComboBoxItem>
-            <ComboBoxItem>15:00</ComboBoxItem>
-            <ComboBoxItem>17:00</ComboBoxItem>
-            <ComboBoxItem>18:30</ComboBoxItem>
-        </ComboBox>
-        <Button Margin="242,517,282,56" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click">Записать</Button>
-        <TextBox Margin="214,121,33,479"/>
-        <Button Margin="595,29,33,543" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад"/>
+       
+        <Button Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад" Margin="563,32,22,0" Height="45" VerticalAlignment="Top"/>
+        
+                    <StackPanel Orientation="Vertical" Margin="10,163,568,124">
+
+                        <TextBlock FontSize="40" FontFamily="Tahoma" Height="82">Имя</TextBlock>
+                        <TextBlock FontSize="40" FontFamily="Tahoma" Height="82"><Run Text="Фамилия"/></TextBlock>
+                        <TextBlock FontSize="40" FontFamily="Tahoma" Height="96"><Run Text="Услуга"/></TextBlock>
+            <TextBlock FontSize="40" FontFamily="Tahoma" Height="88"><Run Text="Время"/></TextBlock>
+
+        </StackPanel>
+     
+            <TextBox Margin="214,163,22,410" ></TextBox>
+        <TextBox Margin="214,253,22,324" ></TextBox>
+            <ComboBox Margin="214,339,22,238"></ComboBox>
+            <ComboBox Margin="214,426,22,158">
+                <ComboBoxItem>10:00</ComboBoxItem>
+                <ComboBoxItem>11:00</ComboBoxItem>
+                <ComboBoxItem>13:00</ComboBoxItem>
+                <ComboBoxItem>15:00</ComboBoxItem>
+                <ComboBoxItem>17:00</ComboBoxItem>
+                <ComboBoxItem>18:30</ComboBoxItem>
+            </ComboBox>
+
+        <Button Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" Margin="288,546,288,10">Записать</Button>
     </Grid>
 </Window>

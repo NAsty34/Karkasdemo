@@ -5,37 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="AlminYsl" Height="734" Width="873" ResizeMode="CanMinimize" >
+        Title="AlminYsl" Height="734" Width="962" ResizeMode="CanMinimize" >
     <Grid>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="0,5,716,5" />
         <Grid.RowDefinitions>
-            <RowDefinition Height="96"/>
+            <RowDefinition Height="142"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Image Style="{DynamicResource ResourceKey=Img}" Margin="24,5,811,22" />
+       
         
-        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="358,20,357,22">Услуги</TextBlock>
+        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="408,45,408,46">Услуги</TextBlock>
         
-        <Button Grid.Row="0" Margin="546,20,28,20" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Добавить услугу</Button>
-
-        <ScrollViewer Grid.Row="1">
-            <ListBox x:Name="serviceList">
+        <Button Grid.Row="0" Margin="697,18,10,71" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Добавить услугу</Button>
+        <Button Grid.Row="0" Margin="697,76,10,5" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1">Добавить запись</Button>
+            <ListBox x:Name="serviceList" Grid.Row="1">
                 <ListBox.ItemTemplate>
                      <DataTemplate>
-                        <Canvas Height="182" Width="800">
-                            <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                            <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Height="48" Width="418" Canvas.Left="279" Canvas.Top="26" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                            <TextBlock Text="{Binding Path=Cost}" FontFamily="Tahoma" FontSize="20" Height="48" Width="346" Canvas.Left="279" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top" />
-                            <TextBlock HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="121" Canvas.Left="271" Canvas.Top="101" FontSize="20" Foreground="Gray"><Run Text="*скидка 10%"/></TextBlock>
-                            <Button Click="Button_Click_3" Canvas.Left="271" Canvas.Top="150">Редактировать услугу</Button>
-                            <Button Click="Button_Click_2"  Canvas.Left="400" Canvas.Top="150" >Удалить услугу</Button>
+                        <Canvas Height="182" Width="900">
+                        <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <StackPanel Canvas.Left="279" Canvas.Top="26" >
+                            <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Width="550" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="0,0,10,0" Visibility="{Binding TargetNullValue=Collapsed, Path=oldcost}" x:Name="dic" TextDecorations="Strikethrough" Text="{Binding Path=oldcost}" FontFamily="Tahoma" FontSize="20" />
+                                <TextBlock Text="{Binding Path=Cost, StringFormat={}{0:#.00 руб.}}" FontFamily="Tahoma" FontSize="20" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="dis" Foreground="Gray" Text="{Binding Path=Discountskid}"/>
+
+                            </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                                <Button Click="Button_Click_3" >Редактировать услугу</Button>
+                                <Button Click="Button_Click_2" Margin="10,0,0,0" >Удалить услугу</Button>
+                            </StackPanel>
+                        </StackPanel>
+
                         </Canvas> 
-                         
                     </DataTemplate> 
                     
                 </ListBox.ItemTemplate>
                
             </ListBox> 
-            
-        </ScrollViewer>
+
     </Grid>
 </Window>

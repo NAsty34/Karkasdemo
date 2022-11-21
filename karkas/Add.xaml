@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Add" Height="587" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="-1,4,643,10" ></Image>
         <Grid.RowDefinitions>
             <RowDefinition Height="90"/>
             <RowDefinition/>
             <RowDefinition Height="66.04"/>
         </Grid.RowDefinitions>
+        <Image Style="{DynamicResource ResourceKey=Img}" Margin="-1,4,643,10" />
         <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" Margin="242,10,242,10">Добавить</Button>
         <Button Grid.Row="0" Margin="591,22,20,12" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад"/>
         <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="214,22,214,20" Text="Добавление услуги"/>
