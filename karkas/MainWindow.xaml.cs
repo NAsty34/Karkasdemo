@@ -16,6 +16,7 @@ using System.Data.SqlClient;
 using karkas.AppDataFile;
 using System.Collections.ObjectModel;
 using System.Security.Policy;
+using System.Windows.Threading;
 
 namespace karkas
 {
@@ -24,7 +25,8 @@ namespace karkas
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        Hello h = new Hello();
+            
         public MainWindow()
         {
             InitializeComponent();
@@ -38,10 +40,20 @@ namespace karkas
                     item.Cost = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
                 }
             }
-                
+
             
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Tick += UpdateData;
+            timer.Start();
+            h.ShowDialog();
             serviceList.ItemsSource = basis;
             
+        }
+
+        private void UpdateData(object sender, EventArgs e)
+        {
+            h.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

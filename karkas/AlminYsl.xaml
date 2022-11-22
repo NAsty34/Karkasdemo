@@ -5,23 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="AlminYsl" Height="734" Width="962" ResizeMode="CanMinimize" >
+        Title="AlminYsl" Height="734" Width="1000" Icon="beauty_logo.ico" >
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="237*"/>
+            <ColumnDefinition Width="414*"/>
+            <ColumnDefinition Width="311*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="142"/>
-            <RowDefinition/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="300*"/>
         </Grid.RowDefinitions>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="24,5,811,22" />
-       
-        
-        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="408,45,408,46">Услуги</TextBlock>
-        
-        <Button Grid.Row="0" Margin="697,18,10,71" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Добавить услугу</Button>
-        <Button Grid.Row="0" Margin="697,76,10,5" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1">Добавить запись</Button>
-            <ListBox x:Name="serviceList" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                     <DataTemplate>
-                        <Canvas Height="182" Width="900">
+
+        <StackPanel  Grid.Column="0" VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center" Width="980" Height="118" Grid.ColumnSpan="3">
+            <StackPanel VerticalAlignment="Center" Width="154" >
+                <Image Style="{DynamicResource ResourceKey=Img}" Width="192" HorizontalAlignment="Center" Height="104" />
+            </StackPanel>
+            <StackPanel Width="200"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                <TextBlock Height="50" Width="150"  FontFamily="Tahoma" FontSize="40" >Услуги</TextBlock>
+            </StackPanel>
+            <StackPanel Width="200"/>
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center"  Grid.Column="2">
+                    <Button Height="50" Width="250"  Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Добавить услугу</Button>
+                </StackPanel>
+                <StackPanel Height="10"/>
+                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="2">
+                    <Button Height="50" Width="250" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1">Добавить запись</Button>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+
+
+
+
+        <ListBox x:Name="serviceList"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="962" Height="590" Grid.Row="1" Grid.ColumnSpan="3">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Canvas Height="182" Width="900">
                         <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                         <StackPanel Canvas.Left="279" Canvas.Top="26" >
                             <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Width="550" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" />
@@ -34,19 +57,19 @@
                                 <TextBlock x:Name="dis" Foreground="Gray" Text="{Binding Path=Discountskid}"/>
 
                             </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal">
+
+                            <StackPanel Orientation="Horizontal">
                                 <Button Click="Button_Click_3" >Редактировать услугу</Button>
                                 <Button Click="Button_Click_2" Margin="10,0,0,0" >Удалить услугу</Button>
                             </StackPanel>
                         </StackPanel>
 
-                        </Canvas> 
-                    </DataTemplate> 
-                    
-                </ListBox.ItemTemplate>
-               
-            </ListBox> 
+                    </Canvas>
+                </DataTemplate>
+
+            </ListBox.ItemTemplate>
+
+        </ListBox>
 
     </Grid>
 </Window>

@@ -5,21 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="MainWindow" Height="759" Width="800" ResizeMode="CanMinimize"  Icon="beauty_logo.ico">
+        Title="MainWindow" Height="734" Width="1000" Icon="beauty_logo.ico">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="140*"/>
+        </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="96"/>
-            <RowDefinition/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="295*"/>
         </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" HorizontalAlignment="Center" Width="900">
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" >
+                <Image Style="{DynamicResource ResourceKey=Img}"  />
+            </StackPanel>
+            <StackPanel Width="220"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                <TextBlock Height="50" Width="150"  FontFamily="Tahoma" FontSize="40" >Услуги</TextBlock>
+            </StackPanel>
+            <StackPanel Width="220"/>
+            <StackPanel VerticalAlignment="Center" Width="182" Grid.Column="2">
+                <Button Height="70" Width="181" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Войти</Button>
+            </StackPanel>
+        </StackPanel>
 
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="11,5,636,5" />
 
-        
-        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="332,20,332,18">Услуги</TextBlock>
-
-        <Button Grid.Row="0" Margin="583,28,43,18" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click">Войти</Button>
-        <ListBox x:Name="serviceList" Grid.Row="1">
+        <ListBox x:Name="serviceList" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="962" Height="590" Grid.Row="1" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Canvas Height="182" Width="900">
@@ -30,10 +43,10 @@
                                 <TextBlock Margin="0,0,10,0" Visibility="{Binding TargetNullValue=Collapsed, Path=oldcost}" x:Name="dic" TextDecorations="Strikethrough" Text="{Binding Path=oldcost}" FontFamily="Tahoma" FontSize="20" />
                                 <TextBlock Text="{Binding Path=Cost, StringFormat={}{0:#.00 руб.}}" FontFamily="Tahoma" FontSize="20" />
                             </StackPanel>
-                            
+
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock x:Name="dis" Foreground="Gray" Text="{Binding Path=Discountskid}"/>
-                                
+
                             </StackPanel>
                         </StackPanel>
 

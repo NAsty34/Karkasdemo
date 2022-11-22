@@ -130,6 +130,9 @@
     <Compile Include="AppDataFile\Tag.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Hello.xaml.cs">
+      <DependentUpon>Hello.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Zapis.xaml.cs">
       <DependentUpon>Zapis.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hello.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

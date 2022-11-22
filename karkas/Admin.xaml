@@ -5,15 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Admin" Height="490" Width="800" ResizeMode="CanMinimize">
+        Title="Admin" Height="350" Width="463" Icon="beauty_logo.ico">
     <Grid>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="6,10,636,354" />
-        <TextBlock Margin="256,23,256,328" FontFamily="Tahoma" FontSize="40">АВТОРИЗАЦИЯ</TextBlock>
-        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,146,549,237">ЛОГИН</TextBlock>
-        <TextBlock FontFamily="Tahoma" FontSize="30" Margin="116,244,549,172">ПАРОЛЬ</TextBlock>
-        <TextBox Margin="256,146,203,272"></TextBox>
-        <PasswordBox Margin="256,244,203,172"/>
-        <Button Margin="270,363,270,32" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click">ВОЙТИ</Button>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Width="335" Margin="0,0,0,2">
+            <Image Style="{DynamicResource ResourceKey=Img}"  Height="55"   />
+            <TextBlock Width="10"/>
+            <TextBlock FontFamily="Tahoma" FontSize="40" Height="48" Width="272" >АВТОРИЗАЦИЯ</TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" Orientation="Horizontal"  Grid.Row="1" HorizontalAlignment="Center" Width="432" Height="82" >
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" Width="125" Height="80" HorizontalAlignment="Right">
+                <TextBlock FontSize="30" Width="124" Height="40" >ЛОГИН</TextBlock>
+                <TextBlock FontSize="30" Width="124"  Height="40" ><Run Text="ПАРОЛЬ"/></TextBlock>
+
+            </StackPanel>
+            <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Vertical" Width="300" Height="79">
+                <TextBox Height="40" Width="250"   />
+                <TextBlock Height="5" Width="250"/>
+                <PasswordBox  Height="34" Width="250"  />
+            </StackPanel>
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Height="49" Width="157" >
+            <Button  Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" Height="49" Content="ВОЙТИ" />
+        </StackPanel>
+
 
     </Grid>
 

@@ -5,32 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Edit" Height="582" Width="800"  ResizeMode="CanMinimize">
+        Title="Edit" Height="700" Width="800" Icon="beauty_logo.ico" >
     <Grid>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="6,10,671,482" />
+
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="90"/>
-                <RowDefinition/>
-                <RowDefinition Height="66.04"/>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="214*" />
+                <RowDefinition Height="43*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="143,22,214,20"><Run Language="ru-ru" Text="Редактирвоание"/><Run Text=" услуги"/></TextBlock>
-            <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" Margin="228,10,228,10">Сохранить изменение</Button>
-            <Button Grid.Row="0" Margin="624,22,20,12" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад"/>
-
-            <StackPanel Grid.Row="1">
-                <TextBlock FontSize="30" FontFamily="Tahoma">Название</TextBlock>
-                <TextBox Width="798" Height="40"/>
-                <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность</TextBlock>
-                <TextBox Width="798" Height="40"/>
-                <TextBlock FontSize="30" FontFamily="Tahoma">Цена</TextBlock>
-                <TextBox Width="798" Height="40"/>
-                <TextBlock FontSize="30" FontFamily="Tahoma">Изображение</TextBlock>
-                <TextBox Width="798" Height="40"/>
-                <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
-                <TextBox Width="798" Height="49"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="750">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" >
+                    <Image Style="{DynamicResource ResourceKey=Img}" Width="100"/>
+                </StackPanel>
+                <StackPanel Width="49"/>
+                <StackPanel Height="50" Width="440" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <TextBlock FontFamily="Tahoma" FontSize="40" Text="Редактирвоание услуги"/>
+                </StackPanel>
+                <StackPanel Width="24"/>
+                <StackPanel VerticalAlignment="Center"  Width="140" >
+                    <Button  Style="{DynamicResource ResourceKey=Button1}" HorizontalAlignment="Center" Width="128" Height="50" Click="Button_Click_1"  Content="Назад"/>
+                </StackPanel>
             </StackPanel>
 
+
+
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="760" Height="450">
+                <TextBlock FontSize="30" FontFamily="Tahoma">Название</TextBlock>
+                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность</TextBlock>
+                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBlock FontSize="30" FontFamily="Tahoma">Цена</TextBlock>
+                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBlock FontSize="30" FontFamily="Tahoma">Изображение</TextBlock>
+                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
+                <TextBox FontSize="40" FontFamily="Tahoma"/>
+            </StackPanel>
+            <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Center" Width="400" Height="50" Margin="0,12,0,0">Сохранить изменение</Button>
         </Grid>
     </Grid>
 </Window>

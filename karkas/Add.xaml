@@ -5,29 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Add" Height="587" Width="800" ResizeMode="CanMinimize">
+        Title="Add" Height="700" Width="800" Icon="beauty_logo.ico">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
-            <RowDefinition/>
-            <RowDefinition Height="66.04"/>
+            <RowDefinition Height="149*"/>
+            <RowDefinition  Height="392*"/>
+            <RowDefinition Height="92*"/>
         </Grid.RowDefinitions>
-        <Image Style="{DynamicResource ResourceKey=Img}" Margin="-1,4,643,10" />
-        <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" Margin="242,10,242,10">Добавить</Button>
-        <Button Grid.Row="0" Margin="591,22,20,12" Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад"/>
-        <TextBlock Grid.Row="0" FontFamily="Tahoma" FontSize="40" Margin="214,22,214,20" Text="Добавление услуги"/>
-        <StackPanel Grid.Row="1">
-            <TextBlock FontSize="30" FontFamily="Tahoma">Название</TextBlock>
-            <TextBox Width="798" Height="40"/>
-            <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность</TextBlock>
-            <TextBox Width="798" Height="40"/>
-            <TextBlock FontSize="30" FontFamily="Tahoma">Цена</TextBlock>
-            <TextBox Width="798" Height="40"/>
-            <TextBlock FontSize="30" FontFamily="Tahoma">Изображение</TextBlock>
-            <TextBox Width="798" Height="40"/>
-            <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
-            <TextBox Width="798" Height="49"/>
+        <StackPanel Orientation="Horizontal" Width="750">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" >
+                <Image Style="{DynamicResource ResourceKey=Img}" Width="120"/>
+            </StackPanel>
+            <StackPanel Width="80"/>
+            <StackPanel Height="50" Width="360" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                <TextBlock FontFamily="Tahoma" FontSize="40" Text="Добавление услуги"/>
+            </StackPanel>
+            <StackPanel Width="30"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <Button  Style="{DynamicResource ResourceKey=Button1}" Width="150" Height="60" Click="Button_Click_1"  Content="Назад"/>
+            </StackPanel>
         </StackPanel>
 
+
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="390" Width="750">
+            <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Название</TextBlock>
+            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Длительность</TextBlock>
+            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Цена</TextBlock>
+            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+            <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Изображение</TextBlock>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="750">
+                <TextBox Height="40" Width="597"/>
+                <Button Width="153" Style="{DynamicResource ResourceKey=Button3}" Content="Импорт" Height="40"></Button>
+            </StackPanel>
+
+            <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
+            <TextBox Width="749" Height="49" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+        <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" Width="200" >Добавить</Button>
     </Grid>
 </Window>
