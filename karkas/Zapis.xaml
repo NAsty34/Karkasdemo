@@ -5,66 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Zapis" Height="500" Width="800" Icon="beauty_logo.ico">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="210*"/>
-            <ColumnDefinition Width="378*"/>
-            <ColumnDefinition Width="179*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="103*"/>
-            <RowDefinition Height="273*"/>
-            <RowDefinition Height="97*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" Width="750">
+        Title="Zapis" MinHeight="750" MinWidth="1234" Icon="beauty_logo.ico">
+    <Viewbox>
+        <Grid Height="750" Width="1252">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210*"/>
+                <ColumnDefinition Width="378*"/>
+                <ColumnDefinition Width="179*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="134*"/>
+                <RowDefinition Height="491*"/>
+                <RowDefinition Height="125*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1214" Height="106" Margin="19,0,0,0">
 
-            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
-                <Image Style="{DynamicResource ResourceKey=Img}" Width="90" />
-            </StackPanel>
-            <StackPanel Width="150"/>
-            <StackPanel Height="50" Width="300" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock FontFamily="Tahoma" FontSize="40" Text="Запись клиента"/>
-            </StackPanel>
-            <StackPanel Width="50"/>
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Left" >
-                <Button Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1"  Content="Назад"  Height="50" Width="150"  />
-            </StackPanel>
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center">
+                    <Image Style="{DynamicResource ResourceKey=Img}" Width="112" Height="100" />
+                </StackPanel>
+                <StackPanel Width="244"/>
+                <StackPanel Height="94" Width="472" Grid.Row="0" VerticalAlignment="Center">
+                    <TextBlock FontFamily="Tahoma" FontSize="60" Text="Запись клиента" Width="439" Height="69" />
+                </StackPanel>
+                <StackPanel Width="134"/>
+                <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <Button Style="{DynamicResource ResourceKey=Button1}" Click="Button_Click_1" FontFamily="Tahoma" FontSize="40" Content="Назад"  Height="65" Width="192"  />
+                </StackPanel>
 
-        </StackPanel>
-
-
-
-        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="260" Grid.Row="1" Grid.Column="0" Width="748" Margin="10,0,0,0">
-            <StackPanel Orientation="Vertical" Width="212" HorizontalAlignment="Right" VerticalAlignment="Top" Height="239" Grid.Row="1">
-                <TextBlock FontSize="40" FontFamily="Tahoma" Height="60">Имя</TextBlock>
-                <TextBlock FontSize="40" FontFamily="Tahoma" Height="60"><Run Text="Фамилия"/></TextBlock>
-                <TextBlock FontSize="40" FontFamily="Tahoma" Height="60"><Run Text="Услуга"/></TextBlock>
-                <TextBlock FontSize="40" FontFamily="Tahoma" Height="60"><Run Text="Время"/></TextBlock>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical"  VerticalAlignment="Center" Width="536"  Height="252" Grid.Row="1" Grid.Column="1" >
-                <TextBox FontSize="40" FontFamily="Tahoma" Height="60" />
-                <TextBlock Height="5"/>
-                <TextBox FontSize="40" FontFamily="Tahoma" Height="60" />
-                <TextBlock Height="5"/>
-                <ComboBox FontSize="40" FontFamily="Tahoma" Height="50" />
-                <TextBlock Height="5"/>
-                <ComboBox FontSize="40" FontFamily="Tahoma" Height="50">
-                    <ComboBoxItem>10:00</ComboBoxItem>
-                    <ComboBoxItem>11:00</ComboBoxItem>
-                    <ComboBoxItem>13:00</ComboBoxItem>
-                    <ComboBoxItem>15:00</ComboBoxItem>
-                    <ComboBoxItem>17:00</ComboBoxItem>
-                    <ComboBoxItem>18:30</ComboBoxItem>
-                </ComboBox>
+
+
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="491" Grid.Row="1" Grid.Column="0" Width="1224" Margin="10,0,0,0">
+                <StackPanel Orientation="Vertical" Width="301" VerticalAlignment="Center" Height="500" Grid.Row="1">
+                    <TextBlock FontSize="40" FontFamily="Tahoma" Height="80">ФИО</TextBlock>
+                    <TextBlock FontSize="40" FontFamily="Tahoma" Height="78"><Run Text="Услуга"/></TextBlock>
+                    <TextBlock FontSize="40" FontFamily="Tahoma" Height="234"><Run Text="Время"/></TextBlock>
+                    <TextBlock FontSize="40" FontFamily="Tahoma" Height="90"><Run Text="Комментарии"/></TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical"  VerticalAlignment="Center" Width="896"  Height="492" Grid.Row="1" Grid.Column="1" >
+                    <ComboBox x:Name="fio" FontSize="40" FontFamily="Tahoma" Height="68"/>
+                    <TextBlock Height="10"/>
+                    <ComboBox x:Name="serv" FontSize="40" FontFamily="Tahoma" Height="68" DisplayMemberPath="Title"/>
+                    <TextBlock Height="10"/>
+                    <Calendar x:Name="calendar1" FirstDayOfWeek="Monday" SelectedDatesChanged="calendar_SelectedDatesChanged" Height="170">
+                        <Calendar.BlackoutDates>
+                            <CalendarDateRange Start="10/5/2013" End="10/8/2013"></CalendarDateRange>
+                        </Calendar.BlackoutDates>
+                    </Calendar>
+                    <ComboBox x:Name="clock" Height="68" Width="890"/>
+                    <TextBlock Height="10"/>
+                    <TextBox FontSize="30" FontFamily="Tahoma" Height="70" Width="892" />
+
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
 
 
 
 
 
-        <Button Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" HorizontalAlignment="Center" Height="60" Width="300" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="1" >Записать</Button>
-    </Grid>
+            <Button Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" HorizontalAlignment="Center" Height="60" Width="300" VerticalAlignment="Top"  Grid.Row="2" Grid.Column="1" Margin="0,55,0,0" >Записать</Button>
+        </Grid>
+    </Viewbox>
 </Window>

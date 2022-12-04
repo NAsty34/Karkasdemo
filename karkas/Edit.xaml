@@ -33,15 +33,15 @@
 
             <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="760" Height="450">
                 <TextBlock FontSize="30" FontFamily="Tahoma">Название</TextBlock>
-                <TextBox FontSize="40" FontFamily="Tahoma"/>
-                <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность</TextBlock>
-                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBox x:Name="name" FontSize="40" FontFamily="Tahoma"/>
+                <TextBlock FontSize="30" FontFamily="Tahoma" RenderTransformOrigin="0.484,0.616" Grid.Row="1">Длительность в минутах</TextBlock>
+                <TextBox x:Name="dlit" FontSize="40" FontFamily="Tahoma"/>
                 <TextBlock FontSize="30" FontFamily="Tahoma">Цена</TextBlock>
-                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBox x:Name="mon" FontSize="40" FontFamily="Tahoma"/>
                 <TextBlock FontSize="30" FontFamily="Tahoma">Изображение</TextBlock>
-                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBox x:Name="photo" FontSize="40" FontFamily="Tahoma"/>
                 <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
-                <TextBox FontSize="40" FontFamily="Tahoma"/>
+                <TextBox x:Name="skid" FontSize="40" FontFamily="Tahoma"/>
             </StackPanel>
             <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Center" Width="400" Height="50" Margin="0,12,0,0">Сохранить изменение</Button>
         </Grid>

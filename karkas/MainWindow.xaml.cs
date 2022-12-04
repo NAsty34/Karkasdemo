@@ -31,34 +31,52 @@ namespace karkas
         {
             InitializeComponent();
             Class1.conObj = new Mihailova_demoEntities2();
-            var basis = Class1.conObj.Service.ToList();
-            foreach (var item in basis) {
-                if (item.Discount > 0)
-                {
-                    item.Discountskid = item.Discount + "% скидка";
-                    item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
-                    item.Cost = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
-                }
-            }
-
-            
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(5);
             timer.Tick += UpdateData;
             timer.Start();
             h.ShowDialog();
-            serviceList.ItemsSource = basis;
+            tim();
             
         }
 
         private void UpdateData(object sender, EventArgs e)
         {
             h.Close();
+            
         }
+
+        private void tim()
+        {
+            var basis = Class1.conObj.Service.ToList();
+            foreach (var item in basis)
+            {
+                if (item.Discount > 0)
+                {
+                    item.Discountskid = item.Discount + "% скидка";
+                    item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
+                    item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                }
+                else
+                {
+                    item.Cost_stat = item.Cost;
+                }
+                item.DurationInMin = item.DurationInSeconds / 60;
+               
+            }
+
+
+           
+            serviceList.ItemsSource = basis;
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new Admin().Show();
+
+           
+            new kod_pr().Show();
+         
             Close();
         }
 

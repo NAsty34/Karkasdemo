@@ -1,4 +1,5 @@
-﻿using System;
+﻿using karkas.AppDataFile;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,8 +22,16 @@ namespace karkas
     public partial class Zapis : Window
     {
         public Zapis()
-        {
+        {            
             InitializeComponent();
+            var kl = Class1.conObj.Client.ToList();
+            var us = Class1.conObj.Service.ToList();
+            var kl_us = Class1.conObj.ClientService.ToList();
+            fio.ItemsSource = kl;
+            serv.ItemsSource = us;
+            fio.SelectedIndex = 0;
+            serv.SelectedIndex = 0;
+            clock.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +47,13 @@ namespace karkas
         {
           
             Close();
+        }
+
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime? selectedDate = calendar1.SelectedDate;
+
+            MessageBox.Show(selectedDate.Value.Date.ToShortDateString());
         }
     }
 }

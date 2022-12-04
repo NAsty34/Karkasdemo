@@ -23,11 +23,11 @@ namespace karkas
         {
             InitializeComponent();
             DateTime date = DateTime.Now;
-            if (date.Hour>4 && date.Hour < 11)
+            if (date.Hour>=4 && date.Hour < 11)
             {
                 privet.Text = "Доброе утро ♥";
             }
-            else if ( date.Hour > 11 && date.Hour < 17)
+            else if ( date.Hour >= 11 && date.Hour < 17)
             {
                 privet.Text = "Добрый день ♥";
             }

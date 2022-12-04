@@ -133,14 +133,13 @@
     <Compile Include="Hello.xaml.cs">
       <DependentUpon>Hello.xaml</DependentUpon>
     </Compile>
+    <Compile Include="kod_pr.xaml.cs">
+      <DependentUpon>kod_pr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Zapis.xaml.cs">
       <DependentUpon>Zapis.xaml</DependentUpon>
     </Compile>
     <Page Include="Add.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,13 +155,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="kod_pr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Admin.xaml.cs">
-      <DependentUpon>Admin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

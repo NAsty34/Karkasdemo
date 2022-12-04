@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Hello" Height="278" Width="484" Icon="beauty_logo.ico">
+        Title="Hello" Height="275" Icon="beauty_logo.ico" WindowStyle="None" ResizeMode="NoResize" Width="366">
+    
     <Grid>
         <TextBlock x:Name="privet" FontSize="40" FontFamily="Tahoma" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Добрый день"/>
         <Image Style="{DynamicResource ResourceKey=Img}" Opacity="0.2"/>
     </Grid>
+  
 </Window>

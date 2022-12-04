@@ -41,7 +41,6 @@ C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\bin
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\karkas.csproj.AssemblyReference.cache
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\karkas.csproj.SuggestedBindingRedirects.cache
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Add.g.cs
-C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Admin.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\AlminYsl.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Edit.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\MainWindow.g.cs
@@ -52,7 +51,6 @@ C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\karkas_MarkupCompile.lref
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\App.baml
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Add.baml
-C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Admin.baml
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\AlminYsl.baml
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Edit.baml
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\MainWindow.baml
@@ -66,3 +64,5 @@ C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\karkas.pdb
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Hello.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Hello.baml
+C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\kod_pr.g.cs
+C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\kod_pr.baml

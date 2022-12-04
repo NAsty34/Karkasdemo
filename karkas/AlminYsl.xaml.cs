@@ -23,7 +23,17 @@ namespace karkas
         public AlminYsl()
         {
             InitializeComponent();
-            Class1.conObj = new Mihailova_demoEntities2();
+            tim();
+
+
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Service sr = ((Button)sender).DataContext as Service;
+            var w = new Edit();
+            w.init(sr);
+
+            w.ShowDialog();
             var basis = Class1.conObj.Service.ToList();
             foreach (var item in basis)
             {
@@ -31,27 +41,62 @@ namespace karkas
                 {
                     item.Discountskid = item.Discount + "% скидка";
                     item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
-                    item.Cost = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                    item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
                 }
+                else
+                {
+                    item.Discountskid = null;
+                    item.oldcost = null;
+                    item.Cost_stat = item.Cost;
+                }
+                item.DurationInMin = item.DurationInSeconds / 60;
             }
             serviceList.ItemsSource = basis;
-        }
-            private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            new Edit().Show();
-            
+            serviceList.Items.Refresh();
+
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            string message = "Запись удалена";
-            string caption = "Remove";
-            MessageBoxResult result = MessageBox.Show(message, caption);
+            var R_S = ((Button)sender).DataContext as Service;
+
+            Class1.conObj.ClientService.RemoveRange(R_S.ClientService);
+            Class1.conObj.ServicePhoto.RemoveRange(R_S.ServicePhoto);
+            Class1.conObj.Service.Remove(R_S);
+            Class1.conObj.SaveChanges();
+            (serviceList.ItemsSource as List<Service>).Remove(R_S);
+
+            serviceList.Items.Refresh();
+            MessageBox.Show("Запись удалена");
+        }
+
+        private void tim()
+        {
+            var basis = Class1.conObj.Service.ToList();
+            foreach (var item in basis)
+            {
+                if (item.Discount > 0)
+                {
+                    item.Discountskid = item.Discount + "% скидка";
+                    item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
+                    item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                }
+                else
+                {
+                    item.Discountskid = null;
+                    item.Cost_stat = item.Cost;
+                }
+                item.DurationInMin = item.DurationInSeconds / 60;
+            }
+            serviceList.ItemsSource = basis;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new Add().Show();
+            tim();
+            new Add().ShowDialog();
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

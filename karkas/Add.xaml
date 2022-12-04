@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:karkas"
         mc:Ignorable="d"
-        Title="Add" Height="700" Width="800" Icon="beauty_logo.ico">
-    <Grid>
+        Title="Add" MinHeight="700" MinWidth="800" Icon="beauty_logo.ico">
+    <Viewbox>
+    <Grid Height="700" Width="800">
         <Grid.RowDefinitions>
             <RowDefinition Height="149*"/>
             <RowDefinition  Height="392*"/>
@@ -30,20 +31,21 @@
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="390" Width="750">
             <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Название</TextBlock>
-            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="name_ysl" Width="750" Height="40" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Tahoma"/>
             <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Длительность</TextBlock>
-            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="min" Width="750" Height="40" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Tahoma"/>
             <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Цена</TextBlock>
-            <TextBox Width="750" Height="40" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="mon" Width="750" Height="40" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Tahoma"/>
             <TextBlock FontSize="30" FontFamily="Tahoma" VerticalAlignment="Center" HorizontalAlignment="Stretch">Изображение</TextBlock>
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="750">
-                <TextBox Height="40" Width="597"/>
-                <Button Width="153" Style="{DynamicResource ResourceKey=Button3}" Content="Импорт" Height="40"></Button>
+                    <TextBox x:Name="photo" Height="40" Width="597" FontSize="30" FontFamily="Tahoma"/>
+                <Button Width="153" Style="{DynamicResource ResourceKey=Button3}" Content="Импорт" Height="40" Click="Button_Click_2"></Button>
             </StackPanel>
 
             <TextBlock FontSize="30" FontFamily="Tahoma">Скидка</TextBlock>
-            <TextBox Width="749" Height="49" HorizontalAlignment="Stretch"/>
+                <TextBox x:Name="skidka" Width="749" Height="49" HorizontalAlignment="Stretch" FontSize="30" FontFamily="Tahoma"/>
         </StackPanel>
         <Button Grid.Row="2" Style="{DynamicResource ResourceKey=Button3}" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Height="60" Width="200" >Добавить</Button>
     </Grid>
+    </Viewbox>
 </Window>
