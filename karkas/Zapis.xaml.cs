@@ -31,12 +31,24 @@ namespace karkas
             serv.ItemsSource = us;
             fio.SelectedIndex = 0;
             serv.SelectedIndex = 0;
-            clock.SelectedIndex = 0;
+          
         }
+
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            var c_s = new ClientService();
+            c_s.Client = fio.SelectedItem as Client;
+            c_s.Service = serv.SelectedItem as Service;
+            var vr = clock.Text.Split(':');
+            var day = (DateTime)calendar1.SelectedDate;
+            c_s.StartTime = new DateTime(day.Year, day.Month, day.Day, int.Parse(vr[0]), int.Parse(vr[1]),0);
+            
+            c_s.Comment = kmn.Text;
+            Class1.conObj.ClientService.Add(c_s);
+            Class1.conObj.SaveChanges();
             string message = "Запись добавлена";
             string caption = "Ready";
             MessageBoxResult result = MessageBox.Show(message, caption);
@@ -55,5 +67,6 @@ namespace karkas
 
             MessageBox.Show(selectedDate.Value.Date.ToShortDateString());
         }
+
     }
 }

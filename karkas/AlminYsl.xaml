@@ -42,10 +42,10 @@
 
 
 
-        <ListBox x:Name="serviceList"  Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="962" Height="590" Grid.Row="1" Grid.ColumnSpan="3">
+            <ListBox x:Name="serviceList" MouseDoubleClick="serviceList_MouseDoubleClick" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="962" Height="590" Grid.Row="1" Grid.ColumnSpan="3" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Canvas Height="182" Width="900">
+                        <Canvas Height="182" Width="900" Background="{Binding Path=Foreground}">
                         <Image Source="{Binding Path=MainImagePath}" Height="110" Width="183" Canvas.Left="66" Canvas.Top="44" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                         <StackPanel Canvas.Left="279" Canvas.Top="26" >
                             <TextBlock Text="{Binding Path=Title}" FontFamily="Tahoma" FontSize="30" Width="550" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" />

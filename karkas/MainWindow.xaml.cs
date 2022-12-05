@@ -56,6 +56,7 @@ namespace karkas
                     item.Discountskid = item.Discount + "% скидка";
                     item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
                     item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                    item.Foreground = "#00FF7F";
                 }
                 else
                 {

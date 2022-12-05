@@ -28,7 +28,8 @@
             <Setter Property="Control.Background" Value="#e1e4ff"/>
             <Setter Property="Control.FontSize" Value="30"/>
         </Style>
-        
+
+       
         
     </Application.Resources>
 </Application>

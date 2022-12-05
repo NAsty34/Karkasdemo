@@ -54,9 +54,10 @@
                             <CalendarDateRange Start="10/5/2013" End="10/8/2013"></CalendarDateRange>
                         </Calendar.BlackoutDates>
                     </Calendar>
-                    <ComboBox x:Name="clock" Height="68" Width="890"/>
+                    <TextBox x:Name="clock" Height="68" Width="890" FontSize="40" FontFamily="Tahoma" VerticalContentAlignment="Center"/>
+
                     <TextBlock Height="10"/>
-                    <TextBox FontSize="30" FontFamily="Tahoma" Height="70" Width="892" />
+                    <TextBox x:Name="kmn" FontSize="40" FontFamily="Tahoma" Height="70" Width="892" VerticalContentAlignment="Center"/>
 
                 </StackPanel>
             </StackPanel>

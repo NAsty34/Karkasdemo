@@ -1,0 +1,45 @@
+﻿<Window x:Class="karkas.Show_Zapis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:karkas"
+        mc:Ignorable="d"
+        Title="Show_Zapis" MinHeight="300" MinWidth="700" Icon="beauty_logo.ico" Height="356" Width="803" >
+    <Viewbox>
+        <Grid Height="300" Width="700">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="21*"/>
+                <RowDefinition Height="79*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="700" Height="56">
+                <Image Style="{DynamicResource ResourceKey=Img}" Width="100" />
+                <StackPanel Width="108"/>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                    <TextBlock Height="50" Width="322"  FontFamily="Tahoma" FontSize="40" >Записи на услугу</TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <ListBox x:Name="showList" VerticalAlignment="Center" HorizontalAlignment="Center" Width="680" Height="216" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" Width="667" Height="166" >
+                            <TextBlock x:Name="title" Text="{Binding Path=Service.Title}" FontFamily="Tahoma" FontSize="20" Width="632" TextWrapping="Wrap" HorizontalAlignment="Center" Height="30" />
+                            <StackPanel Orientation="Horizontal" Height="38" Width="620">
+                                <TextBlock Margin="0,0,10,0" x:Name="dic" Text="{Binding Path=Client}" FontFamily="Tahoma" FontSize="20" Width="291" />
+                                <TextBlock Width="130"/>
+                                <TextBlock Text="{Binding Path=StartTime, StringFormat={}{0:dd.MM.yyyy HH:mm}}" FontFamily="Tahoma" FontSize="20" Width="183"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Width="596" Height="36">
+                                <TextBlock x:Name="dis" Foreground="Gray" Text="{Binding Path=Comment}" Width="596" Height="36"/>
+                            </StackPanel>
+                            <Button Content="Удалить" FontFamily="Tahoma" FontSize="25" HorizontalAlignment="Center" Height="38" Click="Button_Click"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Viewbox>
+</Window>

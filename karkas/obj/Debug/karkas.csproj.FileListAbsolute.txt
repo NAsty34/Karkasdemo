@@ -66,3 +66,5 @@ C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Hello.baml
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\kod_pr.g.cs
 C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\kod_pr.baml
+C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Show_Zapis.g.cs
+C:\Users\imnv9\Desktop\демоэкзамен\задание 1\karkas\karkas\obj\Debug\Show_Zapis.baml

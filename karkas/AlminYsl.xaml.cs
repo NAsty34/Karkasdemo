@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,8 +25,8 @@ namespace karkas
         {
             InitializeComponent();
             tim();
-
-
+            
+          
         }
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -42,9 +43,11 @@ namespace karkas
                     item.Discountskid = item.Discount + "% скидка";
                     item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
                     item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                    item.Foreground = "#00FF7F";
                 }
                 else
                 {
+                    item.Foreground = null;
                     item.Discountskid = null;
                     item.oldcost = null;
                     item.Cost_stat = item.Cost;
@@ -81,13 +84,19 @@ namespace karkas
                     item.Discountskid = item.Discount + "% скидка";
                     item.oldcost = string.Format("{0:#.00руб.}", item.Cost);
                     item.Cost_stat = (decimal)(((double)item.Cost) * ((100 - item.Discount) / 100));
+                    item.Foreground = "#00FF7F";
+
+
                 }
                 else
                 {
+
+                    item.Foreground = null;
                     item.Discountskid = null;
                     item.Cost_stat = item.Cost;
                 }
                 item.DurationInMin = item.DurationInSeconds / 60;
+
             }
             serviceList.ItemsSource = basis;
         }
@@ -102,6 +111,23 @@ namespace karkas
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             new Zapis().Show();
+        }
+
+        private void serviceList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var item = ((FrameworkElement)e.OriginalSource).DataContext as Service;
+            if (item != null)
+            {
+                var w = new Show_Zapis();
+                w.init(item);
+                w.ShowDialog();
+            }
+
+
+            //var w = new Show_Zapis();
+            //w.init(((ListBox)sender).DataContext as Service);
+            //w.Show();
+
         }
     }
 }
